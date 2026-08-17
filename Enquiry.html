@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============ META INFORMATION ============ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry / Booking - Laundry Studio</title>
+    <meta name="description" content="Book laundry services at Laundry Studio. Fill in our simple booking form for washing, shoe cleaning, dyeing, and more.">
+
+    <!-- ============ GOOGLE FONTS ============ -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- ============ FONT AWESOME ICONS ============ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- ============ CSS STYLESHEET ============ -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HEADER: Logo + Navigation Menu (appears on all pages)        -->
+    <!-- ============================================================ -->
+    <header>
+        <div class="logo">
+            <img src="images/icons/logo.jpg.png" width= 100 alt="Laundry Studio Logo">
+            <h1>Laundry Studio</h1>
+        </div>
+        <p class="tagline">Welcome to Laundry Studio. We provide fast, reliable, and affordable laundry services.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- MAIN CONTENT                                                  -->
+    <!-- ============================================================ -->
+    <main>
+
+        <!-- ============ PAGE HEADER ============ -->
+        <section class="page-hero">
+            <h2>Book Our Services</h2>
+            <p>Fill in the form below and we'll get back to you as soon as possible</p>
+        </section>
+
+        <!-- ============ BOOKING FORM ============ -->
+        <section class="booking-form">
+            <form action="#" method="POST">
+
+                <!-- ===== FULL NAME ===== -->
+                <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- ===== CONTACT NUMBER ===== -->
+                <div class="form-group">
+                    <label for="phone">Contact Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <!-- ===== EMAIL ADDRESS ===== -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+
+                <!-- ===== SERVICE SELECTION ===== -->
+                <div class="form-group">
+                    <label for="service">Preferred Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option value="washing">Washing</option>
+                        <option value="drying">Drying</option>
+                        <option value="ironing">Ironing</option>
+                        <option value="folding">Folding</option>
+                        <option value="duvet-cleaning">Duvet Cleaning</option>
+                        <option value="blanket-cleaning">Blanket Cleaning</option>
+                        <option value="express-laundry">Express Laundry</option>
+                        <option value="shoe-cleaning">Shoe Cleaning</option>
+                        <option value="dyeing">Garment Dyeing</option>
+                        <option value="multiple">Multiple Services</option>
+                    </select>
+                </div>
+
+                <!-- ===== PICKUP OR DROP-OFF ===== -->
+                <div class="form-group">
+                    <label for="service-type">Pickup or Drop-off? *</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="">-- Select option --</option>
+                        <option value="pickup">Pickup Service</option>
+                        <option value="dropoff">Drop-off at Studio</option>
+                    </select>
+                </div>
+
+                <!-- ===== DATE ===== -->
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <!-- ===== TIME ===== -->
+                <div class="form-group">
+                    <label for="time">Preferred Time *</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <!-- ===== SPECIAL INSTRUCTIONS ===== -->
+                <div class="form-group">
+                    <label for="instructions">Special Instructions</label>
+                    <textarea id="instructions" name="instructions" rows="4" placeholder="Any special requests or instructions..."></textarea>
+                </div>
+
+                <!-- ===== SUBMIT BUTTON ===== -->
+                <div class="form-group">
+                    <button type="submit" class="btn-primary">Submit Enquiry</button>
+                </div>
+
+                <p class="form-note">* Required fields</p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER                                                        -->
+    <!-- ============================================================ -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <p class="copyright">&copy; 2026 Laundry Studio. All rights reserved.</p>
+
+        <p class="footer-legal">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+    <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>
