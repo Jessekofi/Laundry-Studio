@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Laundry Studio</title>
+   <meta name="description" content="Learn more about Laundry Studio, our professional laundry services, and our commitment to quality garment care.">
+
+    <meta name="keywords" content="Laundry Studio, about us, laundry services, professional laundry, garment care">
     <meta name="description" content="Learn about Laundry Studio's history, mission, and vision. Founded in 2023 in Mount Ayliff, we provide professional laundry services.">
 
     <!-- ============ GOOGLE FONTS ============ -->
@@ -17,27 +20,37 @@
     <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
+<!-- ============ JAVASCRIPT ============ -->
+<script src="js/script.js"></script>
+</body>
 
     <!-- ============================================================ -->
     <!-- HEADER: Logo + Navigation Menu (appears on all pages)        -->
     <!-- ============================================================ -->
-    <header>
-        <div class="logo">
-            <img src="images/icons/logo.jpg.png" width= 100 alt="Laundry Studio Logo">
-            <h1>Laundry Studio</h1>
-        </div>
-        <p class="tagline">Welcome to Laundry Studio. We provide fast, reliable, and affordable laundry services.</p>
+<header>
+    <div class="logo">
+        <img src="images/icons/logo.jpg.png" alt="Laundry Studio Logo">
+        <h1>Laundry Studio</h1>
+    </div>
+    <p class="tagline">Welcome to Laundry Studio. We provide fast, reliable, and affordable laundry services.</p>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- ===== HAMBURGER MENU ICON ===== -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     <!-- ============================================================ -->
     <!-- MAIN CONTENT                                                  -->
@@ -46,13 +59,23 @@
 
         <!-- ============ ABOUT HERO ============ -->
         <section class="page-hero">
-            <h2>About Laundry Studio</h2>
-            <p>Your trusted laundry partner in Mount Ayliff</p>
+            <h2></h2>
+            <p></p>
         </section>
+        
+        <section class="page-hero">
+            <div style="background-color: rgb(229, 239, 248);">
+                 <h2>About Laundry Studio</h2>
+                <p>Your trusted laundry partner in Mount Ayliff</p>
+            </div>
+         </section>
+
 
         <!-- ============ HISTORY ============ -->
+         <div style="background-color: rgb(251, 252, 253);">
         <section class="history">
-            <h2>Our History</h2>
+            <h2 style="margin-bottom: 20px;">
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Our History</h2>
             <p>
                 Laundry Studio was founded in <strong>December 2023</strong> by a young entrepreneur named 
                 <strong>Jesse Yeboah</strong> in Mount Ayliff, Eastern Cape. 
@@ -70,11 +93,11 @@
                 the business provides.
             </p>
         </section>
-
+<h2 style="margin-bottom: 20px;"></h2>
         <!-- ============ MISSION & VISION ============ -->
         <section class="mission-vision">
             <div class="mission">
-                <h3>Our Mission</h3>
+                <h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight: lighter;">Our Mission</h4>
                 <p>
                     <em>"Providing dependable, clean, fresh-scented, and efficient laundry services 
                     that free up our customers' time."</em>
@@ -82,17 +105,18 @@
             </div>
 
             <div class="vision">
-                <h3>Our Vision</h3>
+                <h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Our Vission</h4>
                 <p>
                     <em>"To grow the business to a scale where multiple branches can be opened in 
                     nearby towns, making professional laundry services accessible to more communities."</em>
                 </p>
             </div>
         </section>
+<h2 style="margin-bottom: 20px;"></h2>
 
         <!-- ============ COMMITMENT TO QUALITY ============ -->
         <section class="commitment">
-            <h2>Our Commitment to Quality</h2>
+            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Our Commitment to Quality</h2>
             <p>
                 At Laundry Studio, we understand that your clothes are important to you. 
                 That's why we handle every item with care and attention to detail.
@@ -104,12 +128,15 @@
                 <li>✅ <strong>Customer Satisfaction:</strong> Your happiness is our priority</li>
             </ul>
         </section>
+<h2 style="margin-bottom: 20px;"></h2>
 
         <!-- ============ TEAM INFORMATION ============ -->
         <section class="team">
-            <h2>Meet Our Founder</h2>
+            <h2 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(247, 249, 250);background-color:rgb(44, 148, 218);font-synthesis-weight: initial;text-align: center; box-shadow: 0cqi;">Meet Our Founder</h2>
+            
             <div class="team-member">
-                <img src="images/team/jesse-yeboah.jpeg" width=400 ="Jesse Yeboah - Founder">
+                <div style="text-align: center;">
+                <img src="images/team/jesse-yeboah.jpeg" width=350 ="Jesse Yeboah - Founder">
                 <h3>Jesse Yeboah</h3>
                 <p><strong>Founder & Lead Operator</strong></p>
                 <p>
@@ -121,6 +148,7 @@
         </section>
 
     </main>
+<div></div>
 
     <!-- ============================================================ -->
     <!-- FOOTER                                                        -->

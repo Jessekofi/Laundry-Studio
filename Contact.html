@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Laundry Studio</title>
+    <meta name="description" content="Get in touch with Laundry Studio for professional laundry services, enquiries, and customer support.">
+
+<meta name="keywords" content="Laundry Studio, contact, laundry services, customer support, laundry enquiries">
     <meta name="description" content="Contact Laundry Studio in Mount Ayliff. Call us at 063 432 3365 or email laundrystudio@gmail.com. We're here to help.">
 
     <!-- ============ GOOGLE FONTS ============ -->
@@ -17,88 +20,94 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- ============ JAVASCRIPT ============ -->
+<script src="js/script.js"></script>
+</body>
 
     <!-- ============================================================ -->
     <!-- HEADER: Logo + Navigation Menu (appears on all pages)        -->
     <!-- ============================================================ -->
     <header>
-        <div class="logo">
-            <img src="images/icons/logo.jpg.png" width= 100 alt="Laundry Studio Logo">
-            <h1>Laundry Studio</h1>
-        </div>
-        <p class="tagline">Welcome to Laundry Studio. We provide fast, reliable, and affordable laundry services.</p>
+    <div class="logo">
+        <img src="images/icons/logo.jpg.png" alt="Laundry Studio Logo">
+        <h1>Laundry Studio</h1>
+    </div>
+    <p class="tagline">Welcome to Laundry Studio. We provide fast, reliable, and affordable laundry services.</p>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- ===== HAMBURGER MENU ICON ===== -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
     <!-- ============================================================ -->
     <!-- MAIN CONTENT                                                  -->
     <!-- ============================================================ -->
     <main>
-
-        <!-- ============ PAGE HEADER ============ -->
+ <!-- ============ PAGE HEADER ============ -->
         <section class="page-hero">
-            <h2>Get in Touch</h2>
-            <p>We're here to answer your questions and take your bookings</p>
-        </section>
-
-        <!-- ============ CONTACT INFORMATION ============ -->
-        <section class="contact-info">
-            <div class="contact-details">
-
-                <!-- Phone -->
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3>Phone</h3>
-                        <p><a href="tel:0634323365">063 432 3365</a></p>
-                    </div>
-                </div>
-
-                <!-- Email -->
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:laundrystudio@gmail.com">laundrystudio@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <!-- Address -->
-                <div class="contact-item">
-                    <i class="fas fa-location-dot"></i>
-                    <div>
-                        <h3>Address</h3>
-                        <p>Mount Ayliff, 4735</p>
-                        <p>Eastern Cape, South Africa</p>
-                    </div>
-                </div>
-
-                <!-- Business Hours -->
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h3>Business Hours</h3>
-                        <p><strong>Mon - Fri:</strong> 8:00am - 6:00pm</p>
-                        <p><strong>Sat:</strong> 8:00am - 6:00pm</p>
-                        <p><strong>Sun:</strong> Closed</p>
-                    </div>
-                </div>
-
+            <div style="background-color: rgb(231, 243, 252);">
+                 <h2>Get in Touch</h2>
+                <p>We're here to answer your questions and take your bookings</p>
             </div>
-        </section>
+         </section>
+       
+        <!-- ============ CONTACT INFORMATION ============ -->
+    <div style="background-color: rgb(251, 252, 253);">
+        <div style="text-align: center;">
 
+<section class="contact-info">
+    <div class="contact-details">
+
+        <!-- Phone -->
+        <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p><a href="tel:0634323365">063 432 3365</a></p>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p><a href="mailto:laundrystudio@gmail.com">laundrystudio@gmail.com</a></p>
+        </div>
+
+        <!-- Address -->
+        <div class="contact-item">
+            <i class="fas fa-location-dot"></i>
+            <h3>Address</h3>
+            <p>Mount Ayliff, 4735</p>
+            <p>Eastern Cape, South Africa</p>
+        </div>
+
+        <!-- Business Hours -->
+        <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <h3>Business Hours</h3>
+            <p><strong>Mon - Fri:</strong> 8:00am - 5:00pm</p>
+            <p><strong>Sat:</strong> 8:00am - 2:00pm</p>
+            <p><strong>Sun:</strong> Closed</p>
+        </div>
+
+    </div>
+</section>
+<h2 style="margin-bottom: 50px;"></h2>
         <!-- ============ GOOGLE MAP ============ -->
         <section class="map-section">
-            <h2>Find Us</h2>
+            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;color: rgb(247, 249, 250);background-color:rgb(44, 148, 218);font-synthesis-weight: initial;text-align: center; box-shadow: 0cqi;">Find Us</h2>
             <div class="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223607.93244917343!2d28.91721461209254!3d-30.804749349339516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9a8d3b8c4f5d6b%3A0x7c8a5b3d2e1f4a9c!2sMount%20Ayliff%2C%204735!5e0!3m2!1sen!2sza!4v1699999999999" 
