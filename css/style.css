@@ -99,6 +99,7 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+
 .logo {
     display: flex;
     align-items: center;
@@ -106,8 +107,8 @@ header {
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
+    width: 100px; /* ← Changed from 60px to 100px */
+    height: 100px; /* ← Changed from 60px to 100px */
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #40E0D0;
@@ -271,7 +272,109 @@ nav ul li a:active {
     color: #666666;
     font-size: 0.875rem;
 }
+/* ============================================================ */
+/* ============ SERVICES WITH MAXIMUM SPACES ============ */
+/* ============================================================ */
 
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* ← VERY BIG space between image and text */
+    background: #FFFFFF;
+    padding: 50px 60px; /* ← LARGE padding inside the box */
+    border-radius: 20px;
+    margin-bottom: 60px; /* ← VERY BIG space BETWEEN each service */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #EEEEEE;
+}
+
+.service-item:hover {
+    transform: translateX(15px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-item img {
+    width: 200px; /* ← BIG image */
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-right: 40px; /* ← EXTRA space to the right */
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-item .service-info {
+    flex: 1;
+}
+
+.service-item .service-info h3 {
+    color: #000080;
+    font-size: 1.8rem; /* ← LARGE heading */
+    margin-bottom: 15px;
+}
+
+.service-item .service-info h3 i {
+    color: #007FFF;
+    margin-right: 15px;
+    font-size: 2rem;
+}
+
+.service-item .service-info p {
+    color: #333333;
+    font-size: 1.1rem; /* ← LARGER text */
+    line-height: 2; /* ← MORE line height */
+}
+
+/* ============================================================ */
+/* ============ RESPONSIVE - MOBILE ============ */
+/* ============================================================ */
+
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 30px;
+        margin-bottom: 45px;
+        gap: 30px;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .service-item .service-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-item .service-info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        padding: 25px 20px;
+        margin-bottom: 35px;
+        gap: 25px;
+    }
+
+    .service-item .service-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-item .service-info p {
+        font-size: 0.95rem;
+    }
+
+    .service-item img {
+        max-height: 200px;
+    }
+}
 /* ----- TESTIMONIALS: Grid Layout ----- */
 .testimonials {
     padding: 60px 80px;
@@ -568,17 +671,16 @@ footer {
 }
 
 /* ============================================================ */
-/* ============ 7. RESPONSIVE DESIGN (MEDIA QUERIES) ============ */
+/* ============ RESPONSIVE NAVIGATION ============ */
 /* ============================================================ */
 
-/* ----- TABLET: 768px - 1024px ----- */
-@media (max-width: 1024px) {
-    /* Header */
+/* Tablet and Mobile: Stack navigation vertically */
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px;
+        padding: 15px;
     }
 
     .logo {
@@ -589,14 +691,39 @@ footer {
     .tagline {
         margin-left: 0;
         margin-top: 5px;
+        font-size: 12px;
     }
 
+    /* ----- STACK NAVIGATION VERTICALLY ----- */
     nav ul {
-        justify-content: center;
-        margin-top: 15px;
-        gap: 15px;
+        flex-direction: column; /* Changes from row to column */
+        gap: 8px;
+        width: 100%;
+        padding: 10px 0;
     }
 
+    nav ul li a {
+        font-size: 14px;
+        padding: 10px 20px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    nav ul li a:hover {
+        background: #40E0D0;
+        color: #000080;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+}
     /* Hero */
     .hero {
         flex-direction: column;
@@ -859,21 +986,360 @@ footer {
         padding: 8px 15px;
         font-size: 0.75rem;
     }
+/* ============================================================ */
+/* ============ CONTACT PAGE - FORCE CENTER ============ */
+/* ============================================================ */
 
-    /* Contact page - stacked layout */
+.contact-info {
+    padding: 40px 20px !important;
+    background: #F0F8FF !important;
+    text-align: center !important;
+}
+
+.contact-details {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+.contact-item {
+    background: #FFFFFF !important;
+    padding: 30px 25px !important;
+    border-radius: 15px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+.contact-item i {
+    font-size: 40px !important;
+    color: #007FFF !important;
+    margin-bottom: 15px !important;
+    display: block !important;
+}
+
+.contact-item h3 {
+    color: #000080 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 8px !important;
+}
+
+.contact-item p {
+    color: #333333 !important;
+    margin: 3px 0 !important;
+    font-size: 0.95rem !important;
+}
+
+.contact-item a {
+    color: #007FFF !important;
+    text-decoration: none !important;
+}
+
+.contact-item a:hover {
+    color: #40E0D0 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
     .contact-details {
-        flex-direction: column;
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        max-width: 100% !important;
+        padding: 10px !important;
     }
 
     .contact-item {
+        padding: 25px 20px !important;
+    }
+
+    .contact-item i {
+        font-size: 32px !important;
+    }
+
+    /* ============================================================ */
+/* ============ HAMBURGER MENU STYLES ============ */
+/* ============================================================ */
+
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* The three lines of the hamburger */
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #FFFFFF;
+    margin: 4px 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* ============================================================ */
+/* ============ RESPONSIVE - TABLET & MOBILE ============ */
+/* ============================================================ */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        flex-direction: row;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tagline {
+        display: none; /* Hide tagline on mobile */
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide navigation by default on mobile */
+    nav {
+        display: none;
+        width: 100%;
+        order: 3;
+    }
+
+    /* Show navigation when active (clicked) */
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        padding: 15px 0;
         width: 100%;
     }
 
-    .map-container iframe {
-        height: 250px;
+    nav ul li a {
+        font-size: 16px;
+        padding: 12px 20px;
+        display: block;
+        text-align: center;
+        border-radius: 25px;
+        width: 100%;
     }
 
-    .testimonial-card {
-        padding: 20px;
+    nav ul li a:hover {
+        background: #40E0D0;
+        color: #000080;
     }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+.accordion-title {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accordion-title:hover {
+    color: #1e73be;
+}
+
+.service-info {
+    display: none;
+}
+
+.service-info.active {
+    display: block;
+}
+
+/* ============ GALLERY ============ */
+
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.gallery-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.gallery-image:hover {
+    transform: scale(1.03);
+}
+
+/* ============ LIGHTBOX ============ */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 8px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+/* ============ GALLERY ============ */
+.gallery {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery-grid {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    max-width: 800px !important;
+    margin: 25px auto !important;
+}
+
+/* Force the images to be small */
+img.gallery-image {
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px !important;
+    max-height: 100px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    display: block !important;
+    border: 2px solid #40E0D0 !important;
+}
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 45px;
+    cursor: pointer;
+}
+/* ============================================================ */
+/* ============ LIGHTBOX STYLES ============ */
+/* ============================================================ */
+
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-lightbox:hover {
+    color: #40E0D0;
 }

@@ -1,0 +1,57 @@
+/* ============================================================ */
+/* ============ HAMBURGER MENU TOGGLE ============ */
+/* ============================================================ */
+
+function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('active');
+}
+
+// Optional: Close menu when a link is clicked
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.getElementById('nav-menu');
+        nav.classList.remove('active');
+    });
+});
+function toggleService(element) {
+    const serviceInfo = element.parentElement.querySelector(".service-info");
+
+    serviceInfo.classList.toggle("active");
+}
+function openLightbox(image) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+
+    lightboxImage.src = image.src;
+    lightbox.style.display = "flex";
+}
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+// SERVICE SEARCH
+const serviceSearch = document.getElementById("serviceSearch");
+
+if (serviceSearch) {
+    serviceSearch.addEventListener("input", function () {
+
+        const searchText = serviceSearch.value.toLowerCase().trim();
+        const services = document.querySelectorAll(".service-item");
+
+        services.forEach(function (service) {
+
+            const heading = service.querySelector("h3");
+
+            if (heading) {
+                const serviceName = heading.textContent.toLowerCase();
+
+                if (serviceName.includes(searchText)) {
+                    service.style.display = "";
+                } else {
+                    service.style.display = "none";
+                }
+            }
+        });
+    });
+}
